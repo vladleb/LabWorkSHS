@@ -13,7 +13,7 @@ public class ParallelMatrixProductTest {
         try {
             ParallelMatrixProduct matr = new ParallelMatrixProduct ();
             ansThread = matr.getResult(matrA, matrB, 10);
-            out.println ("Result: " + '\n' + ansThread);
+            out.println (ansThread);
         }
         catch (MatrixException e){
             err.println ( e.getMessage ());
@@ -22,14 +22,14 @@ public class ParallelMatrixProductTest {
         }
         try {
             ansOne = new UsualMatrix (ParallelMatrixProduct.multiplyMatrix (matrA,matrB));
-            out.println ("Result: " + '\n' + ansOne);
+            out.println (ansOne);
         }
         catch (Exception e){
             err.println ( e.getMessage ());
         }
         assertArrayEquals (ansThread.getMatrix (), ansOne.getMatrix ());
     }
-
+//TODO OPTIONAL(JAVA 8), TRY WITH RESOURCES
     @org.junit.Test
     public void multiplyMatrix()
     {
