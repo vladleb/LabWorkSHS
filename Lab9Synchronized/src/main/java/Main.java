@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Main
 {
     public static void main(String[] args)
@@ -48,7 +49,8 @@ class ResourceA
     }
     public synchronized int returnI()
     {
-        return 1;
+        Random random = new Random();
+        return random.nextInt(10);
     }
 }
 
@@ -66,6 +68,7 @@ class ResourceB
     }
     public synchronized int returnI()
     {
-        return 2;
+        Random random = new Random();
+        return random.nextInt(10);
     }
 }
