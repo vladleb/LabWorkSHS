@@ -37,7 +37,7 @@ class ParallelMatrixProduct  {
             UsualMatrix resultUsual = new UsualMatrix(result);
             long finishThread = System.currentTimeMillis ();
             long timeConsumedMillisThread = finishThread - startThread;
-            System.out.println ("Time:" + timeConsumedMillisThread);
+            System.out.println ("Time multiple threads: " + timeConsumedMillisThread);
             return resultUsual;
         }
         else
@@ -49,7 +49,7 @@ class ParallelMatrixProduct  {
     public static int[][] multiplyMatrix(UsualMatrix firstMatrix, UsualMatrix secondMatrix) throws MatrixException
     {
         if(firstMatrix.getWidth ()== secondMatrix.getLength ()) {
-            long startOneThread = System.currentTimeMillis ();
+            long startOneThread = System.currentTimeMillis();
             final int rowCount = firstMatrix.getLength ();
             final int colCount = secondMatrix.getMatrix ()[0].length;
             final int sumLength = secondMatrix.getLength ();
@@ -65,7 +65,7 @@ class ParallelMatrixProduct  {
             }
             long finishOneThread = System.currentTimeMillis();
             long timeConsumedMillisOneThread = finishOneThread - startOneThread;
-            System.out.println("Time:" + timeConsumedMillisOneThread);
+            System.out.println("One thread time: " + timeConsumedMillisOneThread);
             return result;
         }
         else
