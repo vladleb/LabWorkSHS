@@ -1,7 +1,6 @@
 import org.junit.Test;
 
 import static java.lang.System.err;
-import static java.lang.System.out;
 import static org.junit.Assert.*;
 
 public class CombinationsTest {

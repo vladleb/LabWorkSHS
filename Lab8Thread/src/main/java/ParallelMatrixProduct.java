@@ -5,7 +5,7 @@ class ParallelMatrixProduct  {
 
     public UsualMatrix getResult (UsualMatrix first, UsualMatrix second, int threadCount) throws MatrixException{
         if(first.getWidth ()== second.getLength ()){
-            long startThread = System.currentTimeMillis  ();
+            long startThread = System.currentTimeMillis();
             final int rowCount = first.getLength ();
             final int colCount = second.getWidth ();
             final int[][] result = new int[rowCount][colCount];
@@ -35,7 +35,7 @@ class ParallelMatrixProduct  {
             }
 
             UsualMatrix resultUsual = new UsualMatrix(result);
-            long finishThread = System.currentTimeMillis ();
+            long finishThread = System.currentTimeMillis();
             long timeConsumedMillisThread = finishThread - startThread;
             System.out.println ("Time multiple threads: " + timeConsumedMillisThread);
             return resultUsual;
