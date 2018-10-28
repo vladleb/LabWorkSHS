@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 import static java.lang.System.err;
 import static java.lang.System.out;
 import static org.junit.Assert.*;
@@ -7,7 +5,7 @@ import static org.junit.Assert.*;
 public class ParallelMatrixProductTest {
 
     @org.junit.Test
-    public void getResultWithRandMatr() {
+    public void getResultWithRandMatrix() {
         UsualMatrix matrA = new UsualMatrix (3, 5);
         UsualMatrix matrB = new UsualMatrix (5, 3);
         UsualMatrix ansThread = null;
@@ -33,7 +31,7 @@ public class ParallelMatrixProductTest {
     }
 
     @org.junit.Test
-    public void getResultWithReadyMatr()
+    public void getResultWithReadyMatrix()
     {
         int[][] masMatrixA = { {1,2,3}, {1,2,3}, {1,2,3}};
         int[][] masMatrixB = { {3,2,1}, {3,2,1}, {3,2,1}};
@@ -55,7 +53,7 @@ public class ParallelMatrixProductTest {
     }
 //TODO OPTIONAL(JAVA 8), TRY WITH RESOURCES
     @org.junit.Test
-    public void multiplyMatrixWithRandMatr() {
+    public void multiplyMatrixWithRandMatrix() {
         UsualMatrix matrA = new UsualMatrix(2, 4);
         UsualMatrix matrB = new UsualMatrix(4, 2);
         UsualMatrix ansThread = null;
@@ -79,7 +77,7 @@ public class ParallelMatrixProductTest {
     }
 
     @org.junit.Test
-    public void multiplyMatrixWithReadyMatr ()
+    public void multiplyMatrixWithReadyMatrix ()
     {
         int[][] masMatrixA = { {1,2,3}, {1,2,3}, {1,2,3}};
         int[][] masMatrixB = { {3,2,1}, {3,2,1}, {3,2,1}};

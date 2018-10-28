@@ -4,6 +4,22 @@ import static java.lang.System.*;
 public class Main {
 
     public static void main(String[] args) {
+        Combinations multipleThreads = new Combinations();
+        try {
+            out.println("Result of multiple threads: " + multipleThreads.getResultThread(3, 2));
+        }
+        catch (CombinationsException e)
+        {
+            err.println ( e.getMessage ());
+        }
+        Combinations oneThread = new Combinations();
+        try {
+            out.println("Single thread result = " + oneThread.getResultOneThread(3, 2));
+        }
+        catch (CombinationsException e)
+        {
+            err.println ( e.getMessage ());
+        }
         int width;
         int height;
         Scanner in = new Scanner (System.in);
