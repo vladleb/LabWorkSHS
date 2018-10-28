@@ -46,7 +46,7 @@ class ResourceA
         }
         return resourceB.returnI();
     }
-    public int returnI()
+    public synchronized int returnI()
     {
         return 1;
     }
@@ -64,7 +64,7 @@ class ResourceB
         }
         return resourceA.returnI();
     }
-    public int returnI()
+    public synchronized int returnI()
     {
         return 2;
     }
